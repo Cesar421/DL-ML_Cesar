@@ -292,7 +292,7 @@ For this part I trained the model with the whole dataset, using the free GPU pro
 
 ### Training Curves
 
-![Comparison Plot](results/comparison_plot.png)
+![Comparison Plot](https://raw.githubusercontent.com/Cesar421/DL-ML_Cesar/master/dlcv25-assignment-2-Cesar421/results/comparison_plot.png)
 
 **Key Observations:**
 
@@ -317,7 +317,7 @@ For this part I trained the model with the whole dataset, using the free GPU pro
 
 ### Sample Predictions (Good Fit Model)
 
-![Sample Predictions](results/sample_predictions.png)
+![Sample Predictions](https://raw.githubusercontent.com/Cesar421/DL-ML_Cesar/master/dlcv25-assignment-2-Cesar421/results/sample_predictions.png)
 
 **Visualization Details:**
 - Green titles: Correct predictions
@@ -333,7 +333,7 @@ For this part I trained the model with the whole dataset, using the free GPU pro
 
 ### Confusion Matrix (Good Fit Model)
 
-![Confusion Matrix](results/confusion_matrix.png)
+![Confusion Matrix](https://raw.githubusercontent.com/Cesar421/DL-ML_Cesar/master/dlcv25-assignment-2-Cesar421/results/confusion_matrix.png)
 
 **Analysis:**
 - Diagonal elements show correct classifications (brighter = better)
@@ -356,7 +356,7 @@ For this part I trained the model with the whole dataset, using the free GPU pro
 
 ### Confusion Matrix (Good Overfitting Model)
 
-![Confusion Matrix](results/confusion_matrix_overfitting.png)
+![Confusion Matrix](https://raw.githubusercontent.com/Cesar421/DL-ML_Cesar/master/dlcv25-assignment-2-Cesar421/results/confusion_matrix_overfitting.png)
 
 **Class-wise Performance:**
 - **Airplane:** 77% accuracy - Clear shapes and backgrounds help
