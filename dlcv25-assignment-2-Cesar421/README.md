@@ -25,8 +25,8 @@ This project implements a customizable Convolutional Neural Network (CNN) for im
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/BUW-CV/dlcv25-assignment-2-Cesar421.git
-cd dlcv25-assignment-2-Cesar421
+git clone https://github.com/Cesar421/DL-ML_Cesar.git
+cd DL-ML_Cesar/dlcv25-assignment-2-Cesar421
 ```
 
 2. **Install the package and dependencies**
@@ -50,7 +50,7 @@ pytest tests/ -v
 ## Project Structure
 
 ```
-dlcv25-assignment-2-Cesar421/
+DL-ML_Cesar/dlcv25-assignment-2-Cesar421/
 ├── src/dlcv/              # Core implementation
 │   ├── __init__.py
 │   ├── models.py          # CustomizableNetwork architecture
