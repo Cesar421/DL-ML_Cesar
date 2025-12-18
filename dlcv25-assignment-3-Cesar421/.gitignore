@@ -172,4 +172,14 @@ tb_logs/
 
 *data_dir*
 *checkpoints*
+<<<<<<< HEAD
 *tb_logs*
+=======
+*tb_logs*Miniconda3-latest-Linux-x86_64.sh
+
+# Miniconda/Anaconda
+Miniconda3*/
+miniconda*/
+anaconda*/
+Anaconda*/
+>>>>>>> 762751f54dc0e46e9b01d64bf3d7bc9614d80e56

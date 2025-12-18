@@ -32,7 +32,11 @@ def _create_cifar10_datamodule(batch_size, val_split=0.2):
     return CIFAR10DataModule(
         data_dir="data_dir",
         batch_size=batch_size,
+<<<<<<< HEAD
         num_workers=0,  # Set to 0 on Windows to avoid multiprocessing issues
+=======
+        num_workers=8,  # Set to 0 on Windows to avoid multiprocessing issues
+>>>>>>> 762751f54dc0e46e9b01d64bf3d7bc9614d80e56
         img_size=32,
         val_split=val_split,
     )

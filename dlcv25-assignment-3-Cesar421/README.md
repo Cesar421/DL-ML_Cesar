@@ -576,5 +576,50 @@ Instead it is generalizing well to unseen data. (see accuracy graphs above)
 
 cat and dog are tough to distinguish as they are often misclassified as each other in both the training and validation confusion matrices.
 
+<<<<<<< HEAD
 
 python -m dlcv3.main --model hybrid --batch-size 128 --learning-rate 0.0001'
+=======
+## **2.3 Experiment and achieve competitive results**
+
+I ran multiple tests with different models and hyperparameters most of the models and parameters that I used  are able to run below 15 minutes,the best results I achieved are the following:
+
+**pyhton dlcv3/main.py --model cnn --batch-size 128 --learning-rate 0.0005**
+
+train/acc = 96.5%
+
+validation/acc = 86.2%
+
+test/acc = 84.9%
+
+![alt text](Image/image-10.png)
+
+
+**python -m dlcv3.main --model hybrid --batch-size 128 --learning-rate 0.0001**
+
+train/acc = 93.1%
+
+validation/acc = 85.67%
+
+test/acc = 85.49%
+
+![alt text](Image/image-11.png)
+
+I tried different learning rates and batch sizes, but the best results I got are the two mentioned above, 
+below is some graphs of train and validation accuracy for all the try models.
+
+Train accuracy graph:
+
+![alt text](Image/image12.png)
+
+Val accuracy graph:
+
+![alt text](Image/image13.png)
+
+The models above are the simplest ones (using basic augmentation and hyperparameters). 
+
+The next step is to modify the augmentation pipeline to improve the accuracy of the results and play with some other hyperparameters to get results above 90% (If I have luck).
+
+
+
+>>>>>>> 762751f54dc0e46e9b01d64bf3d7bc9614d80e56
