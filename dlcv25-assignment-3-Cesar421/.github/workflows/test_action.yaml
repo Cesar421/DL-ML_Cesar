@@ -1,0 +1,40 @@
+name: DL4CV25-third-assignment
+
+on: [ push ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ "3.12" ]
+
+    steps:
+      - name: Synchronizing repository
+        uses: actions/checkout@v5
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        if: success() || failure()
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+      - name: Test models implemented
+        if: success() || failure()
+        run: |
+          pytest tests/test_models.py
+      - name: Test augmentations implemented
+        if: success() || failure()
+        run: |
+          pytest tests/test_augs.py
+      - name: Test summary implemented
+        if: success() || failure()
+        run: |
+          pytest tests/test_summary.py
+      - name: Test model training and evaluation
+        if: success() || failure()
+        run: |
+          pytest tests/test_train_and_evaluate_models.py

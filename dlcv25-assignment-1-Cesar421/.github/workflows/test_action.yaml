@@ -1,0 +1,46 @@
+name: DL4CV25-first-assignment
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+
+    steps:
+      - name: Synchronizing repository
+        uses: actions/checkout@v5
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        if: success() || failure()
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          python src/mynet/utils.py data
+      - name: Test dataset implementation
+        if: success() || failure()
+        run: |
+          pytest tests/test_dataset.py
+      - name: Test network implementation
+        if: success() || failure()
+        run: |
+          pytest tests/test_network.py
+      - name: Test train one epoch
+        if: success() || failure()
+        run: |
+          pytest tests/test_train_one_epoch.py
+      - name: Test evaluate one epoch
+        if: success() || failure()
+        run: |
+          pytest tests/test_evaluate_one_epoch.py
+      - name: Test train and evaluate model
+        if: success() || failure()
+        run: |
+          pytest tests/test_train_and_evaluate_model.py

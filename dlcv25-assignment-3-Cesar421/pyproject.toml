@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dlcv3"
+version = "0.0.1"
+authors = [
+    { name = "Anton Frolov", email = "anton.frolov@uni-weimar.de" },
+]
+description = "Third DLCV assignment"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "matplotlib",
+    "pytest",
+    "tqdm",
+    # Core
+    "torch>=2.2",
+    "torchvision>=0.17",
+    # Training framework
+    "pytorch-lightning>=2.2",
+    # Data augmentation
+    "albumentations>=1.4",
+    # Models
+    "timm>=1.0",
+    "vit-pytorch>=1.7",
+    # Metrics, logging, utils
+    "torchmetrics>=1.4",
+    "torchinfo>=1.8",
+    "tensorboard>=2.16",
+    "numpy>=1.24",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+    "isort",
+]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dlcv*"]
